@@ -33,7 +33,7 @@ extern unsigned char * init_pass_read_1(void);
 
 extern signed char taking_id(void);
 
-extern unsigned char * select_id(signed char); 
+extern const unsigned char * select_id(signed char); 
 
 extern void init_pass_write_user_one(void);
 
@@ -58,4 +58,3 @@ extern void door_close(void);
 
 
 extern void password_count(signed int);
-  

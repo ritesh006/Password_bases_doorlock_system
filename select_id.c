@@ -1,9 +1,9 @@
 #include "header.h"
 
-unsigned char * select_id(signed char user_id ) /* take_id is formal argument */
+const unsigned char * select_id(signed char user_id ) /* take_id is formal argument */
 {
 	
-	unsigned char * read_pass;
+	const unsigned char * read_pass;
 	
 	switch (user_id)
 	{
