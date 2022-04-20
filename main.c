@@ -23,7 +23,7 @@ void main()
 	char d[5]={0};
 	char b[5]= {0};
 
-	
+	/* extra comment to test */
 	const unsigned char * a;
 	signed char user_id;
 	const	unsigned char * read_pass;
@@ -106,8 +106,6 @@ void main()
 			
 		}
 					
-			
-		   
 	}
 }
 /* ---------------------- Main Ends Here ------------------------------ */
