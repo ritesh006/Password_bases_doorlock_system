@@ -11,7 +11,7 @@ sbit in1=P3^5;   /* declaring pin for motor driver input IN1 */
 sbit in2=P3^6;	 /* declaring pin for motor driver input IN1 */
 
 
-/* ---------------------- Main Starts from Here ------------------------------ */
+/* ---------------------- Main Starts from Here------------------------------- */
 
 void main()
 {
