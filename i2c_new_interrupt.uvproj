@@ -374,97 +374,142 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>Application</GroupName>
           <Files>
-            <File>
-              <FileName>eeprom.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\eeprom.c</FilePath>
-            </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>.\Application\main.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DriverCode</GroupName>
+          <Files>
             <File>
-              <FileName>strcmp.c</FileName>
+              <FileName>compare_password.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\strcmp.c</FilePath>
-            </File>
-            <File>
-              <FileName>lcd1.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\lcd1.c</FilePath>
+              <FilePath>.\driverCode\compare_password.c</FilePath>
             </File>
             <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\delay.c</FilePath>
+              <FilePath>.\driverCode\delay.c</FilePath>
             </File>
             <File>
-              <FileName>keypad.c</FileName>
+              <FileName>dummy_fun.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\keypad.c</FilePath>
-            </File>
-            <File>
-              <FileName>header.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\header.h</FilePath>
-            </File>
-            <File>
-              <FileName>INT0.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\INT0.c</FilePath>
+              <FilePath>.\driverCode\dummy_fun.c</FilePath>
             </File>
             <File>
               <FileName>edit_pass.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\edit_pass.c</FilePath>
+              <FilePath>.\driverCode\edit_pass.c</FilePath>
             </File>
             <File>
-              <FileName>init_pass_read_eeprom.c</FileName>
+              <FileName>eeprom.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\init_pass_read_eeprom.c</FilePath>
-            </File>
-            <File>
-              <FileName>init_pass_write_eeprom.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\init_pass_write_eeprom.c</FilePath>
-            </File>
-            <File>
-              <FileName>taking_id.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\taking_id.c</FilePath>
-            </File>
-            <File>
-              <FileName>select_id.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\select_id.c</FilePath>
-            </File>
-            <File>
-              <FileName>welcome_Screen.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\welcome_Screen.c</FilePath>
-            </File>
-            <File>
-              <FileName>initialize_inturrupt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\initialize_inturrupt.c</FilePath>
-            </File>
-            <File>
-              <FileName>motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\motor.c</FilePath>
+              <FilePath>.\driverCode\eeprom.c</FilePath>
             </File>
             <File>
               <FileName>enter_password.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\enter_password.c</FilePath>
+              <FilePath>.\driverCode\enter_password.c</FilePath>
+            </File>
+            <File>
+              <FileName>frame.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\frame.c</FilePath>
+            </File>
+            <File>
+              <FileName>header.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\driverCode\header.h</FilePath>
+            </File>
+            <File>
+              <FileName>hello.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\hello.c</FilePath>
+            </File>
+            <File>
+              <FileName>init_pass_read_eeprom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\init_pass_read_eeprom.c</FilePath>
+            </File>
+            <File>
+              <FileName>init_pass_write_eeprom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\init_pass_write_eeprom.c</FilePath>
+            </File>
+            <File>
+              <FileName>initialize_inturrupt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\initialize_inturrupt.c</FilePath>
+            </File>
+            <File>
+              <FileName>INT0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\INT0.c</FilePath>
+            </File>
+            <File>
+              <FileName>int0.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\driverCode\int0.h</FilePath>
+            </File>
+            <File>
+              <FileName>keypad.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\keypad.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\lcd1.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>pass.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\pass.c</FilePath>
+            </File>
+            <File>
+              <FileName>read.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\read.c</FilePath>
+            </File>
+            <File>
+              <FileName>select_id.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\select_id.c</FilePath>
+            </File>
+            <File>
+              <FileName>strcmp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\strcmp.c</FilePath>
             </File>
             <File>
               <FileName>system_block.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\system_block.c</FilePath>
+              <FilePath>.\driverCode\system_block.c</FilePath>
+            </File>
+            <File>
+              <FileName>taking_id.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\taking_id.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>welcome_Screen.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driverCode\welcome_Screen.c</FilePath>
             </File>
           </Files>
         </Group>
