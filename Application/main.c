@@ -1,13 +1,13 @@
-#include <reg51.h>  				/* register address included with header file */
-#include "../include/app_api.h" 	/* user defined header file added */
-#include <string.h> 				/* from this liabrary used string compare function "strcmp" */
+#include <reg51.h>  							/* register address included with header file */
+#include "../include/app_api.h" 				/* user defined header file added */
+#include <string.h> 							/* from this liabrary used string compare function "strcmp" */
 
-sbit buzzer  = P3^7; 				/* declare buzzer for alarming purpose when user enter wrong password */
+sbit buzzer  = P3^7; 							/* declare buzzer for alarming purpose when user enter wrong password */
 
-sbit trigger = P2^7;                /* delcaring trigger pin to trigger the external interrrupt 0 when pin goes high it will trigger to pin 3.2 */
+sbit trigger = P2^7;              				/* delcaring trigger pin to trigger the external interrrupt 0 when pin goes high it will trigger to pin 3.2 */
 
-sbit in1=P3^5;   					/* declaring pin for motor driver input IN1 */
-sbit in2=P3^6;	 					/* declaring pin for motor driver input IN1 */
+sbit in1=P3^5;   								/* declaring pin for motor driver input IN1 */
+sbit in2=P3^6;	 								/* declaring pin for motor driver input IN1 */
 
 
 /* ---------------------- Main Starts from Here------------------------------- */
@@ -18,7 +18,7 @@ void main()
 	unsigned char master_key[5] = "000"; 			/* initialise variable to store the master password which can use to change the password of user */
 	unsigned char temp = 0;							/* initialise variable to store the key_value of '=' key when its pressed */
 	signed   int  count = 0;						/* storing value to check wrong password is equal to three or not */
-    unsigned char compare_value = 0;  	 			/* storing result of string compare function */     
+  	unsigned char compare_value = 0;  	 			/* storing result of string compare function */     
 	char x[5]={0};
 	char d[5]={0};
 	char b[5]= {0};
@@ -43,9 +43,9 @@ void main()
 	while(1)
 	{ 
 		
-		user_id = taking_id();          /* selection id from user */
+		user_id = taking_id();          			/* selection id from user */
 		
-		read_pass = select_id(user_id);	/* select one from three id */
+		read_pass = select_id(user_id);				/* select one from three id */
 		
 		strcpy(x , read_pass);
 		

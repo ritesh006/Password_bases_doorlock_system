@@ -1,0 +1,23 @@
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\main.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\delay.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\dummy_fun.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\edit_pass.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\eeprom.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\enter_password.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\init_pass_read_eeprom.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\init_pass_write_eeprom.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\initialize_inturrupt.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\INT0.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\keypad.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\lcd1.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\motor.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\pass.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\read.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\select_id.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\strcmp.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\system_block.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\taking_id.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\uart.obj",
+"C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\welcome_Screen.obj" 
+TO "C:\Users\USER\Desktop\my_Space\my_Project\8051\Password_bases_doorlock_system\Output\Door" 
+PRINT(".\Door.m51") RAMSIZE(256) 

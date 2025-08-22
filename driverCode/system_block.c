@@ -7,7 +7,7 @@ void password_count(signed int count)
 	{
 		lcd_cmd(0x01);
 		lcd_cmd(0x80);
-	  string_data("UR SYTEM BLOCK"); 
+	    string_data("UR SYTEM BLOCK"); 
 		delay_ms(2000);
 	}
 	
