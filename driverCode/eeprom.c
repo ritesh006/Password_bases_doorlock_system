@@ -1,19 +1,19 @@
 #include<reg51.h>
-#include"header.h"
+#include"../include/app_api.h"
 //#include"types.h"
 sbit sda=P2^4;
 sbit scl=P2^5;
 
 
 
-void I2C_stop(void)
+void I2C_Stop(void)
 {
 	scl=0;
 	sda=0;
 	scl=1;
 	sda=1;
 }
-void I2C_byte_write(unsigned char dat)
+void I2C_Byte_Write(unsigned char dat)
 {
 	signed char i;
 	for(i=7;i>=0;i--)
@@ -23,7 +23,7 @@ void I2C_byte_write(unsigned char dat)
 		scl=1;
 	}
 }
-unsigned char I2C_byte_read(void)
+unsigned char I2C_Byte_Read(void)
 {
 	unsigned char ch=0;
 	signed char i;
@@ -36,20 +36,20 @@ unsigned char I2C_byte_read(void)
 	}
 	return ch;
 }
-void i2c_slave_ack(void)
+void I2C_Slave_Ack(void)
 {
 	scl=0;
 	sda=1;
 	scl=1;
 	while(sda==1);//waiting
 }
-void i2c_noack(void)
+void I2C_Noack(void)
 {
 	scl=0;
 	sda=1;
 	scl=1;
 }
-void i2c_master_ack(void)
+void I2C_Master_Ack(void)
 {
 	scl=0;//Master making the scl line low
 	sda=0;//master pulling the sda line low
@@ -57,77 +57,77 @@ void i2c_master_ack(void)
 	scl=0;//Master has applied the clock pulse
 	sda=1;//Master releasing the sda line 
 }
-void i2c_device_byte_write(unsigned char sa,unsigned char buf_addr,unsigned char dat)
+void I2C_Device_Byte_Write(unsigned char sa,unsigned char buf_addr,unsigned char dat)
 {
-	I2C_start();
-	I2C_byte_write(sa);
-	i2c_slave_ack();			
-	I2C_byte_write(buf_addr);
-	i2c_slave_ack();			
-	I2C_byte_write(dat);
-	i2c_slave_ack();			
-	I2C_stop();
+	I2C_Start();
+	I2C_Byte_Write(sa);
+	I2C_Slave_Ack();			
+	I2C_Byte_Write(buf_addr);
+	I2C_Slave_Ack();			
+	I2C_Byte_Write(dat);
+	I2C_Slave_Ack();			
+	I2C_Stop();
 	delay_ms(10);
 }
-unsigned char i2c_device_byte_read(unsigned char sa,unsigned char buf_addr)
+unsigned char I2C_Device_Byte_Read(unsigned char sa,unsigned char buf_addr)
 {
 	unsigned char ch;
-	I2C_start();
-	I2C_byte_write(sa);
-	i2c_slave_ack();			
-	I2C_byte_write(buf_addr);
-	i2c_slave_ack();			
-	I2C_start();
-	I2C_byte_write(sa|0x01);
-	i2c_slave_ack();
-	ch=I2C_byte_read();
+	I2C_Start();
+	I2C_Byte_Write(sa);
+	I2C_Slave_Ack();			
+	I2C_Byte_Write(buf_addr);
+	I2C_Slave_Ack();			
+	I2C_Start();
+	I2C_Byte_Write(sa|0x01);
+	I2C_Slave_Ack();
+	ch=I2C_Byte_Read();
 	
-	i2c_noack();				
-	I2C_stop();
+	I2C_Noack();				
+	I2C_Stop();
 	delay_ms(10);
 	return(ch);
 }
-/*void i2c_device_seq_write(unsigned char sa,unsigned char buf_addr,unsigned char dat)
+/*void I2C_Device_Seq_Write(unsigned char sa,unsigned char buf_addr,unsigned char dat)
 {
 	unsigned char i;
-	I2C_start();
-	I2C_byte_write(sa);
-	i2c_slave_ack();			
-	I2C_byte_write(buf_addr);
-	i2c_slave_ack();
+	I2C_Start();
+	I2C_Byte_Write(sa);
+	I2C_Slave_Ack();			
+	I2C_Byte_Write(buf_addr);
+	I2C_Slave_Ack();
 	for(i=1;i<9;i++)			
 	{
-		I2C_byte_write(dat+i);
-		i2c_slave_ack();			
+		I2C_Byte_Write(dat+i);
+		I2C_Slave_Ack();			
 	}
-	I2C_stop();
+	I2C_Stop();
 	delay_ms(10);
 }
-unsigned char* i2c_device_seq_read(unsigned char sa,unsigned char buf_addr)
+unsigned char* I2C_Device_Seq_Read(unsigned char sa,unsigned char buf_addr)
 {
 	unsigned char a[10],i;
-	I2C_start();
-	I2C_byte_write(sa);
-	i2c_slave_ack();			
-	I2C_byte_write(buf_addr);
-	i2c_slave_ack();			
-	I2C_start();
-	I2C_byte_write(sa|0x01);
-	i2c_slave_ack();
+	I2C_Start();
+	I2C_Byte_Write(sa);
+	I2C_Slave_Ack();			
+	I2C_Byte_Write(buf_addr);
+	I2C_Slave_Ack();			
+	I2C_Start();
+	I2C_Byte_Write(sa|0x01);
+	I2C_Slave_Ack();
 	for(i=0;i<7;i++)
 	{
-		a[i]=I2C_byte_read();
-		i2c_master_ack();
+		a[i]=I2C_Byte_Read();
+		I2C_Master_Ack();
 	}
-	a[i]=I2C_byte_read();
-	i2c_noack();				
-	I2C_stop();
+	a[i]=I2C_Byte_Read();
+	I2C_Noack();				
+	I2C_Stop();
 	delay_ms(10);
 	return(a);
 }
 
 */
-void I2C_start(void)
+void I2C_Start(void)
 {
 	scl=0;
 	sda=1;

@@ -1,4 +1,4 @@
-#include"header.h"
+#include"../include/app_api.h"
 unsigned char * init_pass_read_1(void)
 {
 	
@@ -7,26 +7,26 @@ unsigned char * init_pass_read_1(void)
 	lcd_init();
 	lcd_cmd(0x80);
 
-  temp=i2c_device_byte_read(0xA0,0x11);
+  temp=I2C_Device_Byte_Read(0xA0,0x11);
 	b[0]=temp;
 	lcd_data(b[0]);
 	
   
-  temp=i2c_device_byte_read(0xA0,0x12);
+  temp=I2C_Device_Byte_Read(0xA0,0x12);
 	b[1]=temp;
 	lcd_data(b[1]);
 	
-  temp=i2c_device_byte_read(0xA0,0x13);
+  temp=I2C_Device_Byte_Read(0xA0,0x13);
 	b[2]=temp;
 	lcd_data(b[2]);
 	
   
-	temp=i2c_device_byte_read(0xA0,0x14);
+	temp=I2C_Device_Byte_Read(0xA0,0x14);
 	b[3]=temp;
 	lcd_data(b[3]);
 	
  
- temp=i2c_device_byte_read(0xA0,0x15);
+ temp=I2C_Device_Byte_Read(0xA0,0x15);
 	b[4]=temp;
 	lcd_data(b[4]);
 	return b;

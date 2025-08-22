@@ -1,5 +1,5 @@
 #include<reg51.h>
-#include"header.h"
+#include"../include/app_api.h"
 sbit in1 =P3^5;
 sbit in2 =P3^6;
 sbit buzzer =P3^7;

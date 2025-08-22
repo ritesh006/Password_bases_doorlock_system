@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../include/app_api.h"
 #include<string.h>
 void edit_pass(void)
 {
@@ -78,7 +78,7 @@ string_data("SET UR NEW PASS");
 	//row_init();                  //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[0]=key;
-	i2c_device_byte_write(0xA0,0x3,key);//write 1 byte of data into eeprom memory loaction
+	I2C_Device_Byte_Write(0xA0,0x3,key);//write 1 byte of data into eeprom memory loaction
 
 	row_Init(); 
 	while(Is_Keypressed());//waiting for sw press2
@@ -86,7 +86,7 @@ string_data("SET UR NEW PASS");
 	//row_init();                //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[1]=key;
-i2c_device_byte_write(0xA0,0x4,key);//write 1 byte of data into eeprom memory loaction
+I2C_Device_Byte_Write(0xA0,0x4,key);//write 1 byte of data into eeprom memory loaction
 
  
  row_Init();
@@ -95,7 +95,7 @@ i2c_device_byte_write(0xA0,0x4,key);//write 1 byte of data into eeprom memory lo
 				 //row_init();             //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[2]=key;
-i2c_device_byte_write(0xA0,0x5,key);//write 1 byte of data into eeprom memory loaction
+I2C_Device_Byte_Write(0xA0,0x5,key);//write 1 byte of data into eeprom memory loaction
 
 break;
 
@@ -108,7 +108,7 @@ break;
 	//row_init();                  //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[0]=key;
-	i2c_device_byte_write(0xA0,0x8,key);//write 1 byte of data into eeprom memory loaction
+	I2C_Device_Byte_Write(0xA0,0x8,key);//write 1 byte of data into eeprom memory loaction
 
 	row_Init(); 
 	while(Is_Keypressed());//waiting for sw press2
@@ -116,7 +116,7 @@ break;
 	//row_init();                //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[1]=key;
-i2c_device_byte_write(0xA0,0x9,key);//write 1 byte of data into eeprom memory loaction
+I2C_Device_Byte_Write(0xA0,0x9,key);//write 1 byte of data into eeprom memory loaction
 
  
  row_Init();
@@ -125,7 +125,7 @@ i2c_device_byte_write(0xA0,0x9,key);//write 1 byte of data into eeprom memory lo
 				 //row_init();             //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[2]=key;
-i2c_device_byte_write(0xA0,0x0A,key);//write 1 byte of data into eeprom memory loaction
+I2C_Device_Byte_Write(0xA0,0x0A,key);//write 1 byte of data into eeprom memory loaction
 
 break;
 		
@@ -137,7 +137,7 @@ break;
 	//row_init();                  //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[0]=key;
-	i2c_device_byte_write(0xA0,0x0D,key);//write 1 byte of data into eeprom memory loaction
+	I2C_Device_Byte_Write(0xA0,0x0D,key);//write 1 byte of data into eeprom memory loaction
 
 	row_Init(); 
 	while(Is_Keypressed());//waiting for sw press2
@@ -145,7 +145,7 @@ break;
 	//row_init();                //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[1]=key;
-i2c_device_byte_write(0xA0,0x0E,key);//write 1 byte of data into eeprom memory loaction
+I2C_Device_Byte_Write(0xA0,0x0E,key);//write 1 byte of data into eeprom memory loaction
 
  
  row_Init();
@@ -154,7 +154,7 @@ i2c_device_byte_write(0xA0,0x0E,key);//write 1 byte of data into eeprom memory l
 				 //row_init();             //row stuck in the same position so initialze again
 	lcd_data(key);
 	//c[2]=key;
-i2c_device_byte_write(0xA0,0x0F,key);//write 1 byte of data into eeprom memory loaction
+I2C_Device_Byte_Write(0xA0,0x0F,key);//write 1 byte of data into eeprom memory loaction
 
 break;
 		
